@@ -13,9 +13,22 @@ body {
     padding: 0;
     margin: 0;
   }
-  
+
   .boxes > * {
     padding: .5rem;
     background-color: #333;
     color: white;
+  }
+
+  .boxes {
+      display: grid;
+      grid-auto-rows: minmax(125px, auto);
+      grid-gap: .5rem;
+  }
+
+  @media screen and (min-width: 40em) {
+      .boxes {
+          grid-template-columns: repeat(6, 1fr);
+          grid-gap: 2px;
+      }
   }
